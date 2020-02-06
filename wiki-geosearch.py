@@ -32,7 +32,12 @@ lon=-79.783333
 # X,Y dimensions of the area in km.  Must be greater than
 # 10km. Multiples of 10 may get "Bounding box is too big", so try
 # numbers that end in 9.
-distance = 99 
+distance = 19 
+
+headers = {
+    'User-Agent': 'WikiGeoSearch/0.1 (User:Cxbrx)',
+    'From': 'cxbrooks@gmail.com'
+}
 
 # Given a bounding box in (lat, lon) query the database for pages within that bounding box.
 def geosearch(top, left, bottom, right):
@@ -46,7 +51,7 @@ def geosearch(top, left, bottom, right):
         "action": "query"
     }
 
-    R = S.get(url=URL, params=PARAMS)
+    R = S.get(url=URL, params=PARAMS, headers=headers)
     DATA = R.json()
     # print(DATA)
 
