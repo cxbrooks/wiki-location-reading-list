@@ -21,10 +21,16 @@ In the perfect world, a user would be able to use the Wikipedia iOS or
 Android app while they had connectivity and save pages within a
 certain distance of a location.
 
+Ideally, it would be possible to use this facility with non-Wikipedia wikis.
+However, the
+[Wikipedia app supports only Wikipedia and not other MediaWikis](https://phabricator.wikimedia.org/T107042)
+
 ## Reading Lists in Wikipedia
 The Wikipedia iOS and Android apps have [synced reading lists](https://www.mediawiki.org/wiki/Wikimedia_Apps/Synced_Reading_Lists) that could be used.  A browser plugin that [supports reading lists](https://www.mediawiki.org/wiki/Wikimedia_Apps/Reading_list_browser_extension) can be added to Firefox and other browsers.  The downside here is that sharing these reading lists is not supported.
 
-* [Reading Lists](https://www.mediawiki.org/wiki/Reading/Reading_Lists) (mediawiki) - The Reading Lists API
+* Mediawiki pages
+  * [Reading Lists](https://www.mediawiki.org/wiki/Reading/Reading_Lists) - The Reading Lists API
+  * [Wikimedia Apps - Offline support](https://www.mediawiki.org/wiki/Wikimedia_Apps/Offline_support) - Mentions [[#Kiwix |Kiwix]]
 
 * Phabricator projects
   * [Reading list service component](https://phabricator.wikimedia.org/project/profile/2740/)
@@ -33,8 +39,8 @@ The Wikipedia iOS and Android apps have [synced reading lists](https://www.media
 * Phabricator tickets
   * [Reading lists on desktop and mobile web](https://phabricator.wikimedia.org/T194441)
   * [Shelve Offline Library code for now](https://phabricator.wikimedia.org/T195518)
+  * [Generic version of Wikipedia mobile apps that other MediaWikis could reuse](https://phabricator.wikimedia.org/T107042)
 
-* [Wikimedia Apps - Offline support](https://www.mediawiki.org/wiki/Wikimedia_Apps/Offline_support) - Mentions [[#Kiwix |Kiwix]]
 
 ### Reading Lists are private
 A Mediawiki bot can read reading lists, but cannot update them.  This is because by design, bots don't have the `editmyprivateinfo` permission.  So, to add entries to a reading list, we must login as the user
