@@ -35,19 +35,22 @@ The Wikipedia iOS and Android apps have [synced reading lists](https://www.media
 * Phabricator projects
   * [Reading list service component](https://phabricator.wikimedia.org/project/profile/2740/)
   * [Synchronized reading lists](https://phabricator.wikimedia.org/project/view/2483/)
+  * [iOS-app-feature-Places](https://phabricator.wikimedia.org/project/profile/2008/)
 
 * Phabricator tickets
   * [Reading lists on desktop and mobile web](https://phabricator.wikimedia.org/T194441)
   * [Shelve Offline Library code for now](https://phabricator.wikimedia.org/T195518)
   * [Generic version of Wikipedia mobile apps that other MediaWikis could reuse](https://phabricator.wikimedia.org/T107042)
 
-
 ### Reading Lists are private
 A Mediawiki bot can read reading lists, but cannot update them.  This is because by design, bots don't have the `editmyprivateinfo` permission.  So, to add entries to a reading list, we must login as the user
+
+### Places requires an internet connection
+The Wikipedia app requires an internet connection to show nearby pages in the places map.  Ideally, if there was no internet connection, then the app would query any saved pages.
 
 ## Bugs and limitations
 * This code is a proof of concept, locations and list_ids are hardwired in and need to be updated.
 * The method of getting the username and password is pathetic.  The username and password cannot have a colon in them.
-* If there is no internet, will the Wikipedia app still show nearby locations?
+
 
 Source: https://github.com/cxbrooks/wiki-location-reading-list
